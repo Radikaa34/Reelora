@@ -1,0 +1,12 @@
+
+.universe-scene {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(91, 33, 182, 0.18), transparent 38%),
+    radial-gradient(ellipse at 85% 35%, rgba(157, 23, 77, 0.12), transparent 35%),
+    #070611;
+}

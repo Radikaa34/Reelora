@@ -1,3 +1,8 @@
+import TrendingSection from "./components/TrendingSection";
+import TrendingMovies from "./components/TrendingMovies";
+import TrendingDramas from "./components/TrendingDramas";
+import Footer from "./components/Footer";
+import Link from "next/link";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#FAF6FC] px-4 sm:px-6 md:px-10">
@@ -7,13 +12,12 @@ export default function Home() {
         </p>
 
         <div className="flex items-center gap-3 sm:gap-5">
-          <button className="font-semibold text-purple-500 transition hover:text-purple-700">
+          
+          <Link
+          href="/login" 
+          className="rounded-full bg-purple-500 px-5 py-2.5 font-semibold text-white shadow-md transition hover:bg-purple-600">
             Log In
-          </button>
-
-          <button className="rounded-full bg-purple-500 px-5 py-2.5 font-semibold text-white shadow-md transition hover:bg-purple-600">
-            Sign Up
-          </button>
+          </Link>
         </div>
       </nav>
       <section className="hero-bg flex items-center px-4 py-10 sm:px-8 md:px-10">
@@ -30,40 +34,49 @@ export default function Home() {
             Anime, dramas, movies, comics and stories — all in one cozy place.
           </p>
 
-          <button className="hero-button mt-6">
+          <Link 
+          href="/signup"
+          className="hero-button mt-6">
             Get Started Free
-          </button>
+          </Link>
 
           <p className="mt-4 text-center text-sm text-purple-100/80">
             Your next favorite story is waiting.
           </p>
         </div>
-      </section>
-      <section className="home-box">
+      </section>    
+      <section className="features-section">
+        <h2 className="features-heading">Features</h2>
+
         <div className="content">
           <div className="content-text">
-          <img src="/sparkles.png"/>
-          <p className="font-bold">Curated picks for every mood</p>
+            <img src="/sparkles.png" alt="" />
+            <p>Curated picks for every mood</p>
           </div>
+
           <div className="content-text">
-          <img src="/heart.png"/>
-          <p className="font-bold">Your watchlist and progress</p>
+            <img src="/heart.png" alt="" />
+            <p>Your watchlist and progress</p>
           </div>
+
           <div className="content-text">
-          <img src="/link.png"/>
-          <p className="font-bold">Anime, Drama, Movies and comics</p>
+            <img src="/link.png" alt="" />
+            <p>Anime, Drama, Movies and comics</p>
           </div>
+
           <div className="content-text">
-          <img src="/clapperboard.png"/>
-          <p className="font-bold">Streaming platforms, free or paid</p>
+            <img src="/clapperboard.png" alt="" />
+            <p>Streaming platforms, free or paid</p>
           </div>
+
           <div className="content-text">
-          <img src="/people.png"/>
-          <p className="font-bold">Recommendations based on you taste</p>
+            <img src="/people.png" alt="" />
+            <p>Recommendations based on your taste</p>
           </div>
+
           <div className="content-text">
-          <img src="/book.png"/>
-          <p className="font-bold">Rate and review your favorite titles</p>
+            <img src="/book.png" alt="" />
+            <p>Rate and review your favorite titles</p>
           </div>
         </div>
       </section>
@@ -126,6 +139,11 @@ export default function Home() {
         </div>
         
       </section>
+      <TrendingSection />
+      <TrendingMovies />
+      <TrendingDramas />
+      <Footer/>
+      
     </main>
   );
 }
